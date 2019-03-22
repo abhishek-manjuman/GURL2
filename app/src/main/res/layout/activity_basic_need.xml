@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/basic_need_back"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="Basic Need"
+            app:titleTextColor="@color/colorPrimaryDark1"></android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/basic_need_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimaryDark2"
+            app:tabIndicatorHeight="3dp"
+            app:tabSelectedTextColor="@color/colorPrimaryDark2"
+            app:tabRippleColor="@color/colorPrimaryDark1"
+            app:tabIndicatorGravity="bottom"
+            app:tabMode="scrollable">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/library_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Library" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/seminar_hall_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="seminar halls" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/cafeteria_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cafeteria" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/stationery_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stationery" />
+            <android.support.design.widget.TabItem
+                android:id="@+id/hostel_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hostel" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/sport_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sport" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/waitingroom_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Waiting room" />
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/washroom_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="washroom" />
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/basic_need_viewPager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">-->
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--tools:context=".BasicNeedActivity">-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/cardView5"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="60dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="5dp"-->
+    <!--app:cardPreventCornerOverlap="true"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/guideline2"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/guideline"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+    <!--android:id="@+id/basic_need_back"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:theme="?attr/actionBarTheme"-->
+    <!--app:title="@string/basic_need"-->
+    <!--app:titleTextColor="@color/colorPrimaryDark1">-->
+
+    <!--</android.support.v7.widget.Toolbar>-->
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<ScrollView-->
+    <!--android:id="@+id/scrollView3"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/guideline2"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/guideline"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/cardView5">-->
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/constraintLayout3"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/library"-->
+    <!--android:layout_width="170dp"-->
+    <!--android:layout_height="190dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="8dp"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/sports"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="84dp"-->
+    <!--android:layout_height="84dp"-->
+    <!--android:src="@drawable/library" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="@string/library"-->
+    <!--android:textColor="@color/colorPrimaryDark1"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="10sp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/colorPrimaryLight" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="@string/library_"-->
+    <!--android:textColor="@android:color/darker_gray" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/sports"-->
+    <!--android:layout_width="170dp"-->
+    <!--android:layout_height="190dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="8dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/library"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="84dp"-->
+    <!--android:layout_height="84dp"-->
+    <!--android:src="@drawable/sports" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="@string/sports"-->
+    <!--android:textColor="@color/colorPrimaryDark1"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="10sp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/colorPrimaryLight" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="@string/sports_"-->
+    <!--android:textColor="@android:color/darker_gray" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/cafeteria"-->
+    <!--android:layout_width="170dp"-->
+    <!--android:layout_height="190dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="8dp"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/washroom"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/waiting_room"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/library">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="84dp"-->
+    <!--android:layout_height="84dp"-->
+    <!--android:src="@drawable/cafeteria" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="@string/cafeteria"-->
+    <!--android:textColor="@color/colorPrimaryDark1"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="10sp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/colorPrimaryLight" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="@string/cafeteria_"-->
+    <!--android:textColor="@android:color/darker_gray" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/waiting_room"-->
+    <!--android:layout_width="170dp"-->
+    <!--android:layout_height="190dp"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="8dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/cafeteria"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/sports">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="84dp"-->
+    <!--android:layout_height="84dp"-->
+    <!--android:padding="0dp"-->
+    <!--android:src="@drawable/seatingroom" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="@string/waiting"-->
+    <!--android:textColor="@color/colorPrimaryDark1"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="10sp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/colorPrimaryLight" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="@string/waiting_"-->
+    <!--android:textColor="@android:color/darker_gray" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/washroom"-->
+    <!--android:layout_width="170dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="10dp"-->
+    <!--android:layout_marginStart="24dp"-->
+    <!--android:layout_marginLeft="24dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:layout_marginEnd="24dp"-->
+    <!--android:layout_marginRight="24dp"-->
+    <!--app:cardCornerRadius="10dp"-->
+    <!--app:cardElevation="8dp"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintHorizontal_bias="0.5"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="84dp"-->
+    <!--android:layout_height="84dp"-->
+    <!--android:padding="0dp"-->
+    <!--android:src="@drawable/washroom" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="@string/washroom"-->
+    <!--android:textColor="@color/colorPrimaryDark1"-->
+    <!--android:textSize="18dp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="1dp"-->
+    <!--android:layout_marginLeft="10sp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:background="@color/colorPrimaryLight" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="5dp"-->
+    <!--android:text="@string/washroom_"-->
+    <!--android:textColor="@android:color/darker_gray" />-->
+
+    <!--</LinearLayout>-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+    <!--</ScrollView>-->
+
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+    <!--</android.support.v4.widget.NestedScrollView>-->
+</android.support.constraint.ConstraintLayout>

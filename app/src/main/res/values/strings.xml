@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">GU-RL</string>
+    <!-- String related to home page -->
+    <string name="basic_need">Basic Need</string>
+    <string name="basic_need_">Rest/Seating Room, Washroom, Parking, Cafeteria, etc.</string>
+    <string name="departments">Departments</string>
+    <string name="departments_">Account, Enquiry, Examination, Placement Departments, etc.</string>
+    <string name="higher_authority">Higher Authority</string>
+    <string name="higher_authority_">Chancellor, Vice chancellor, Registrar, etc.</string>
+    <string name="faculty">Faculty</string>
+    <string name="faculty_">Search any Faculty of any departments.</string>
+    <string name="classrooms">Classrooms Detail</string>
+    <string name="classrooms_">It is only for university students. See all your class schedules and rooms.</string>
+    <!-- String related to Basic Needs -->
+    <string name="library">Library</string>
+    <string name="library_">See all the diffrent department libraries.</string>
+    <string name="cafeteria">Cafeteria</string>
+    <string name="cafeteria_">See the direction of university cafeteria(Canteen.</string>
+    <string name="sports">Sports</string>
+    <string name="sports_">See all the informetion related to Sports.</string>
+    <string name="waiting">waiting Room</string>
+    <string name="waiting_">See the information of seating room and seating areas.</string>
+    <string name="washroom">Washroom</string>
+    <string name="washroom_">See the direction for washroom of each blocks.</string>
+
+
+    <string name="title_activity_login">Sign in</string>
+
+
+    <!-- Basic need page -->
+    <string name="library_intro">The Galgotias University library is proud of its excellent facilities and services which enable individual study, group problem-solving activities, presentation work and resource sharing.</string>
+    <string name="a_block_library1">School of Basic and Appl. Sc. (Tech.) Library</string>
+    <string name="a_block_library1_floor">A-Block Ground Floor</string>
+    <string name="a_block_library2">School of Law Library</string>
+    <string name="a_block_library2_floor">A-Block Fifth Floor</string>
+    <string name="b_block_library">School of Business, Arch, Pharmacy, Nursery etc. Library</string>
+    <string name="b_block_library_floor">B-Block Ground Floor</string>
+    <string name="more_Detail">More Details</string>
+
+    <!-- Seminar halls -->
+    <string name="seminar_hall">Auditorium and Seminar Hall The institute encompasses two seminar halls in each blocks, which are designed in a way to accelerate the teaching learning process using modern technological aids. It is normally used to give the presentations, seminars, etc. The halls are fully air conditioned.</string>
+    <string name="a_room_no_222">Room Number : 222</string>
+    <string name="a_room_no_222_flore">A-block 2<u>nd</u> flore</string>
+
+    <!-- Cafeteria -->
+    <string name="cafeteria_detail">a restaurant in which customers serve themselves from a counter and pay before eating.</string>
+
+    <!-- Stationery -->
+    <string name="stationery_detail"> Stationery includes materials to be written on by hand or by equipment such as computer printers. </string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="forget_pass">Forget Password?</string>
+    <string name="signup">Sign Up</string>
+    <string name="signin">Sign In</string>
+    <string name="email">Email</string>
+    <string name="enrolment">Enrolment/Admission Number</string>
+    <string name="password">Password</string>
+    <string name="already_register">Have an account already?</string>
+    <string name="notRegister">If you are not registered yet! Register now if you are a student of galgotias university.</string>
+    <string name="profilr_welcome">Welcome</string>
+    <string name="updete_profile">Update Profile Details</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt1_forget_pass">Find Your Account</string>
+    <string name="txt2_forget_pass">Enter your register email</string>
+    <string name="txt1_email_verification">Verify Your Email</string>
+    <string name="txt2_otp_verification">Check your email for OTP</string>
+    <string name="txt_newpass">Create Your New Password</string>
+
+</resources>

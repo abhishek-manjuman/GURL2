@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gredientbackground">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/galgotias_university_logo"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/appLogo"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="331dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark1"
+            android:visibility="visible"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="GURL"
+            android:textColor="@color/colorPrimaryDark1"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
