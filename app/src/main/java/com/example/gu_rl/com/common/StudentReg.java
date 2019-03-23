@@ -14,6 +14,13 @@ public class StudentReg {
     }
 
     public StudentReg(String imageName, String imageUri) {
+
+        //{}
+        if(imageName.trim().equals("")){
+            imageName = "no name";
+        }
+
+
         this.imageName = imageName;
         ImageUri = imageUri;
     }

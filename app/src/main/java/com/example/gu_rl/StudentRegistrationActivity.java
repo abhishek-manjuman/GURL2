@@ -96,7 +96,7 @@ public class StudentRegistrationActivity extends AppCompatActivity {
 
         if(!TextUtils.isEmpty(studentEnrollment) && !TextUtils.isEmpty(studentEmail) && !TextUtils.isEmpty(studentPassword)){
 
-            String idReg = databaseReference1.push().getKey();
+            final String idReg = databaseReference1.push().getKey();
             StudentReg studentReg = new StudentReg(idReg, studentEnrollment, studentEmail, studentPassword, strDate);
 
             databaseReference1.child(idReg).setValue(studentReg).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -105,11 +105,12 @@ public class StudentRegistrationActivity extends AppCompatActivity {
 
                     if(task.isSuccessful()){
                     String idLogin = databaseReference2.push().getKey();
-                    UserLogin userLogin = new UserLogin(idLogin, studentEnrollment, studentEmail, studentPassword, ststus, userType,strDate);
+                    UserLogin userLogin = new UserLogin(idReg, studentEnrollment, studentEmail, studentPassword, ststus, userType,strDate);
                     databaseReference2.child(idLogin).setValue(userLogin);
                     Toasty.success(StudentRegistrationActivity.this,"Registration Successful",Toast.LENGTH_SHORT).show();
                     currentUser.writeLoginStatus(true);
                     Intent intent = new Intent(StudentRegistrationActivity.this, StudentLoginActivity.class);
+                    intent.putExtra("userId", idReg);
                     startActivity(intent);
                     finish();
                     }else {

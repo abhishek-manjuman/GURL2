@@ -123,6 +123,7 @@ public class StudentLoginActivity extends AppCompatActivity {
                                currentUser.writeLoginStatus(true);
                                Toasty.success(StudentLoginActivity.this, "You are successfully Login.", Toast.LENGTH_SHORT).show();
                                Intent intent = new Intent(StudentLoginActivity.this, HomeActivity.class);
+                               intent.putExtra("userId", log.getId());
                                startActivity(intent);
                                finish();
                            }

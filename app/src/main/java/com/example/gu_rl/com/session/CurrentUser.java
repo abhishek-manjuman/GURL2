@@ -7,6 +7,7 @@ public class CurrentUser {
 
        private SharedPreferences sharedPreferences;
        private Context context;
+       //public String userId;
        //private String name;
 
     public CurrentUser(Context context) {
@@ -16,6 +17,7 @@ public class CurrentUser {
     }
     //{}
     public void writeLoginStatus(boolean status){
+       // this.userId = userId;
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean("Current_user_login_status", status);
         editor.commit();
