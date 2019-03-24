@@ -18,19 +18,24 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.gu_rl.com.common.StudentReg;
 import com.example.gu_rl.com.common.UserLogin;
 import com.example.gu_rl.com.session.CurrentUser;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
+import com.mikhaellopez.circularimageview.CircularImageView;
 import com.squareup.picasso.Picasso;
 
 import es.dmoral.toasty.Toasty;
@@ -39,7 +44,8 @@ public class UserProfileActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView userBio, userName, userEmail, userPhone, userCourse;
-    private ImageView userProfileImage, addNewProfileImage;
+    private CircularImageView userProfileImage;
+    private ImageView addNewProfileImage;
     private Button btnLogout, btnViewDetails, btnUploadImage;
     private ProgressBar progressBar;
 
@@ -52,6 +58,9 @@ public class UserProfileActivity extends AppCompatActivity {
     private UserLogin userLogin;
 
     private StorageTask storageTask;
+
+    Intent getUser;
+    String UserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,10 +83,37 @@ public class UserProfileActivity extends AppCompatActivity {
         userCourse = (TextView)findViewById(R.id.user_course);
         btnLogout = (Button) findViewById(R.id.btn_user_profile_logout);
         btnViewDetails = (Button) findViewById(R.id.btn_user_profile_view_details);
-        userProfileImage = (ImageView) findViewById(R.id.user_profile_image);
+        userProfileImage = (CircularImageView) findViewById(R.id.user_profile_image);
         addNewProfileImage = (ImageView) findViewById(R.id.add_new_profile_image);
         progressBar = (ProgressBar) findViewById(R.id.profile_image_upload_progressBar);
         btnUploadImage = (Button) findViewById(R.id.btn_upload_image);
+
+        getUser = getIntent();
+        UserId = getUser.getStringExtra("userId");
+        //{}
+        if(currentUser.readLoginStatus()){
+
+            databaseReference.child(currentUser.getCurrentUserId()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                    DataSnapshot dataSnapshot1 = dataSnapshot.getChildren();
+                    StudentReg studentReg = dataSnapshot.getValue(StudentReg.class);
+                    userProfileImage.setImageURI(Uri.parse(studentReg.getImageUri()));
+//                    Glide.with(UserProfileActivity.this)
+//                            .load(studentReg.getImageUri()).into(userProfileImage);
+                    //Picasso.get()
+                      //      .load(studentReg.getImageUri())
+                        //    .into(userProfileImage);
+                    userCourse.setText(studentReg.getImageUri());
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+        }
 
 
         btnUploadImage.setOnClickListener(new View.OnClickListener() {
@@ -172,10 +208,9 @@ public class UserProfileActivity extends AppCompatActivity {
                             }, 5000);
 
                             Toasty.success(UserProfileActivity.this,"Image upload successful!", Toast.LENGTH_SHORT).show();
-                            StudentReg studentReg = new StudentReg("details",taskSnapshot.getUploadSessionUri().toString());
-                            String uploadid = databaseReference.push().getKey();
-                            databaseReference.child(uploadid).setValue(studentReg);
-
+                           // StudentReg studentReg = new StudentReg("details",taskSnapshot.getUploadSessionUri().toString());
+                            //String uploadid = databaseReference.push().getKey();
+                            databaseReference.child(currentUser.getCurrentUserId()).child("imageUri").setValue(taskSnapshot.getUploadSessionUri().toString());
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
@@ -199,7 +234,7 @@ public class UserProfileActivity extends AppCompatActivity {
 
 
     private void userLogout() {
-        currentUser.writeLoginStatus(false);
+        currentUser.writeLoginStatus(false,"");
         startActivity(new Intent(this,HomeActivity.class));
         finish();
     }

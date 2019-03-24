@@ -120,7 +120,7 @@ public class StudentLoginActivity extends AppCompatActivity {
                        if (log.getUserType().equals("student")){
                            if (log.getStatus().equals("true")){
                                match_userStatus++;
-                               currentUser.writeLoginStatus(true);
+                               currentUser.writeLoginStatus(true, log.getId());
                                Toasty.success(StudentLoginActivity.this, "You are successfully Login.", Toast.LENGTH_SHORT).show();
                                Intent intent = new Intent(StudentLoginActivity.this, HomeActivity.class);
                                intent.putExtra("userId", log.getId());

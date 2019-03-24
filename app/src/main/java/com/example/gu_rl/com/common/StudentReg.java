@@ -8,7 +8,7 @@ public class StudentReg {
     private String pass;
     private String regDate;
     private String imageName;
-    private String ImageUri;
+    private String imageUri;
 
     public StudentReg() {
     }
@@ -22,7 +22,7 @@ public class StudentReg {
 
 
         this.imageName = imageName;
-        ImageUri = imageUri;
+        this.imageUri = imageUri;
     }
 
     public StudentReg(String id, String enrollment, String email, String pass, String regDate) {
@@ -33,12 +33,21 @@ public class StudentReg {
         this.regDate = regDate;
     }
 
+    public StudentReg(String id, String enrollment, String email, String pass, String regDate, String imageUri) {
+        this.id = id;
+        this.enrollment = enrollment;
+        this.email = email;
+        this.pass = pass;
+        this.regDate = regDate;
+        this.imageUri = imageUri;
+    }
+
     public void setImageName(String imageName) {
         this.imageName = imageName;
     }
 
     public void setImageUri(String imageUri) {
-        ImageUri = imageUri;
+        this.imageUri = imageUri;
     }
 
     public String getImageName() {
@@ -46,7 +55,7 @@ public class StudentReg {
     }
 
     public String getImageUri() {
-        return ImageUri;
+        return imageUri;
     }
 
     public String getId() {

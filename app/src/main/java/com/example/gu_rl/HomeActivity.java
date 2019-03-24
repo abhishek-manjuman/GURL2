@@ -35,6 +35,10 @@ public class HomeActivity extends AppCompatActivity {
 
         currentUser = new CurrentUser(getApplicationContext());
 
+        String userId = currentUser.getCurrentUserId();
+
+
+
         circularImageView = (CircularImageView)findViewById(R.id.userProfile);
         if(currentUser.readLoginStatus()){
             circularImageView.setImageResource(R.drawable.raj);
