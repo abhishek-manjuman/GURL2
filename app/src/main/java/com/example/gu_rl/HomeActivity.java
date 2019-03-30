@@ -4,18 +4,33 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.gu_rl.com.common.SearchAdapter;
 import com.example.gu_rl.com.session.CurrentUser;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.mikhaellopez.circularimageview.CircularImageView;
+
+import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -28,16 +43,19 @@ public class HomeActivity extends AppCompatActivity {
 
     private CurrentUser currentUser;
 
+    private DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+//        FirebaseApp.initializeApp(this);
+//        databaseReference = FirebaseDatabase.getInstance().getReference("faculty");
+
         currentUser = new CurrentUser(getApplicationContext());
 
         String userId = currentUser.getCurrentUserId();
-
-
 
         circularImageView = (CircularImageView)findViewById(R.id.userProfile);
         if(currentUser.readLoginStatus()){
@@ -98,7 +116,7 @@ public class HomeActivity extends AppCompatActivity {
         editText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showSearchBar();
+                startActivity(new Intent(HomeActivity.this,SearchBarActivity.class));
             }
         });
         circularImageView.setOnClickListener(new View.OnClickListener() {
@@ -139,20 +157,6 @@ public class HomeActivity extends AppCompatActivity {
     private void basicNeed() {
         Intent intent = new Intent(this, BasicNeedActivity.class);
         startActivity(intent);
-    }
-
-    private void showSearchBar() {
-        searchbar.setContentView(R.layout.searchbar);
-        closeSearchBar = (ImageView) searchbar.findViewById(R.id.close);
-
-        closeSearchBar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                searchbar.dismiss();
-            }
-        });
-        searchbar.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        searchbar.show();
     }
 
     private void userLogin() {
