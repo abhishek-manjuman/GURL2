@@ -76,22 +76,34 @@ public class SearchBarActivity extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
-//{}
                     if(s.toString().isEmpty()){
 
-                        setAdapter(s.toString());
-
-                    }else {
                         fullNameList.clear();
                         firstNameList.clear();
                         lastNameList.clear();
                         departmentList.clear();
                         recyclerViewSearchItem.removeAllViews();
+
+                    }else {
+                        setAdapter(s.toString());
                     }
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+//{}
+//                    if(s.toString().isEmpty()){
+//
+//                        setAdapter(s.toString());
+//
+//                    }else {
+//                        fullNameList.clear();
+//                        firstNameList.clear();
+//                        lastNameList.clear();
+//                        departmentList.clear();
+//                        recyclerViewSearchItem.removeAllViews();
+//                    }
                 }
             });
 
@@ -124,19 +136,19 @@ public class SearchBarActivity extends AppCompatActivity {
                     String lastName = data.child("lastName").getValue(String.class);
                     String departmentName = data.child("department").getValue(String.class);
 
-                    if(fullName.contains(string)){
+                    if(fullName.toLowerCase().contains(string.toLowerCase()) || fullName.toUpperCase().contains(string.toUpperCase())){
                         fullNameList.add(fullName);
                         firstNameList.add(firstName);
                         lastNameList.add(lastName);
                         departmentList.add(departmentName);
                         counter++;
-                    }else if(firstName.contains(string)){
+                    }else if(firstName.toLowerCase().contains(string.toLowerCase()) || firstName.toUpperCase().contains(string.toUpperCase())){
                         fullNameList.add(fullName);
                         firstNameList.add(firstName);
                         lastNameList.add(lastName);
                         departmentList.add(departmentName);
                         counter++;
-                    }else if(lastName.contains(string)){
+                    }else if(lastName.toLowerCase().contains(string.toLowerCase()) || lastName.toUpperCase().contains(string.toUpperCase())){
                         fullNameList.add(fullName);
                         firstNameList.add(firstName);
                         lastNameList.add(lastName);

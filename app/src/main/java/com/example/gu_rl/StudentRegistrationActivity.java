@@ -109,7 +109,7 @@ public class StudentRegistrationActivity extends AppCompatActivity {
                     databaseReference2.child(idLogin).setValue(userLogin);
                     Toasty.success(StudentRegistrationActivity.this,"Registration Successful",Toast.LENGTH_SHORT).show();
                     currentUser.writeLoginStatus(true,idReg);
-                    Intent intent = new Intent(StudentRegistrationActivity.this, StudentLoginActivity.class);
+                    Intent intent = new Intent(StudentRegistrationActivity.this, HomeActivity.class);
                     intent.putExtra("userId", idReg);
                     startActivity(intent);
                     finish();

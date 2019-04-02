@@ -154,7 +154,7 @@ public class StudentLoginActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this,StudentRegistrationActivity.class);
         startActivity(intent);
-        //finish();
+        finish();
 
     }
 

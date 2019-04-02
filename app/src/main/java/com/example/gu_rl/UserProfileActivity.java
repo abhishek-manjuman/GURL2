@@ -97,14 +97,14 @@ public class UserProfileActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 //                    DataSnapshot dataSnapshot1 = dataSnapshot.getChildren();
-                    StudentReg studentReg = dataSnapshot.getValue(StudentReg.class);
-                    userProfileImage.setImageURI(Uri.parse(studentReg.getImageUri()));
+//                    StudentReg studentReg = dataSnapshot.getValue(StudentReg.class);
+//                    userProfileImage.setImageURI(Uri.parse(studentReg.getImageUri()));
 //                    Glide.with(UserProfileActivity.this)
 //                            .load(studentReg.getImageUri()).into(userProfileImage);
                     //Picasso.get()
                       //      .load(studentReg.getImageUri())
                         //    .into(userProfileImage);
-                    userCourse.setText(studentReg.getImageUri());
+//                    userCourse.setText(studentReg.getImageUri());
                 }
 
                 @Override
