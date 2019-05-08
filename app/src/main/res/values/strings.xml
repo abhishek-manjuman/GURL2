@@ -129,5 +129,25 @@
     <string name="txt1_email_verification">Verify Your Email</string>
     <string name="txt2_otp_verification">Check your email for OTP</string>
     <string name="txt_newpass">Create Your New Password</string>
+    <string name="select_programs">Select Program</string>
+    <string name="select_schools">Select School</string>
+    <string name="select_courses">Select Course</string>
+
+    <string-array name="programs_array">
+        <item>Select Program</item>
+        <item>Diploma Programs</item>
+        <item>Doctoral Programs</item>
+        <item>Integrated Programs</item>
+        <item>Post Graduate Programs</item>
+        <item>Under Graduate Programs</item>
+    </string-array>
+
+    <string-array name="schools_array">
+        <item>Select School</item>
+    </string-array>
+
+    <string-array name="courses_array">
+        <item>Select Course</item>
+    </string-array>
 
 </resources>

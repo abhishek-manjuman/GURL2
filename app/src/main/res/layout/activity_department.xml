@@ -32,7 +32,7 @@
             <android.support.v7.widget.CardView
                 android:id="@+id/cardView22"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
@@ -44,31 +44,53 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                <Spinner
+                    android:id="@+id/select_programs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/programs_array"
+                    android:prompt="@string/select_programs"
+                    android:layout_marginTop="10dp"/>
 
-                <!--<com.jaredrummler.materialspinner.MaterialSpinner-->
-                    <!--android:id="@+id/materialSpinner"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="match_parent"-->
-                    <!--android:layout_marginStart="8dp"-->
-                    <!--android:layout_marginLeft="0dp"-->
-                    <!--android:layout_marginTop="0dp"-->
-                    <!--android:layout_marginEnd="8dp"-->
-                    <!--android:layout_marginRight="0dp"-->
-                    <!--android:elevation="10dp"-->
-                    <!--app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--app:layout_constraintStart_toStartOf="parent"-->
-                    <!--app:layout_constraintTop_toTopOf="parent"-->
-                    <!--app:ms_arrow_tint="@color/colorPrimary"-->
-                    <!--app:ms_background_color="@color/colorPrimaryDark2"-->
-                    <!--app:ms_hint="Select Program"-->
-                    <!--app:ms_text_color="@color/colorPrimary" />-->
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/select_schools"
+                    android:prompt="@string/select_schools"
+                    android:entries="@array/schools_array"
+                    android:layout_marginTop="100dp"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/select_courses"
+                    android:prompt="@string/select_courses"
+                    android:entries="@array/courses_array"
+                    android:layout_marginTop="190dp"/>
 
             </android.support.v7.widget.CardView>
+
+
+
+            <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70dp"
+                    android:padding="20dp"
+                    android:textSize="16sp"
+                    android:id="@+id/department_details"/>
+
+            </ScrollView>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
