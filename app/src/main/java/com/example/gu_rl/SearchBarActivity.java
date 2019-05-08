@@ -1,5 +1,6 @@
 package com.example.gu_rl;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
@@ -41,6 +42,7 @@ public class SearchBarActivity extends AppCompatActivity {
     ArrayList<String> firstNameList;
     ArrayList<String> lastNameList;
     ArrayList<String> departmentList;
+    ArrayList<String> facultyIdList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +68,7 @@ public class SearchBarActivity extends AppCompatActivity {
             firstNameList = new ArrayList<>();
             lastNameList = new ArrayList<>();
             departmentList = new ArrayList<>();
+            facultyIdList = new ArrayList<>();
 
             txtSearch.addTextChangedListener(new TextWatcher() {
                 @Override
@@ -82,10 +85,14 @@ public class SearchBarActivity extends AppCompatActivity {
                         firstNameList.clear();
                         lastNameList.clear();
                         departmentList.clear();
+                        facultyIdList.clear();
                         recyclerViewSearchItem.removeAllViews();
 
                     }else {
                         setAdapter(s.toString());
+                        Intent intent=new Intent(SearchBarActivity.this, FacultyProfileActivity.class);
+                        startActivity(intent);
+
                     }
 
                 }
@@ -126,6 +133,7 @@ public class SearchBarActivity extends AppCompatActivity {
                 firstNameList.clear();
                 lastNameList.clear();
                 departmentList.clear();
+                facultyIdList.clear();
                 recyclerViewSearchItem.removeAllViews();
                 int counter = 0;
 
@@ -141,18 +149,21 @@ public class SearchBarActivity extends AppCompatActivity {
                         firstNameList.add(firstName);
                         lastNameList.add(lastName);
                         departmentList.add(departmentName);
+                        facultyIdList.add(uid);
                         counter++;
                     }else if(firstName.toLowerCase().contains(string.toLowerCase()) || firstName.toUpperCase().contains(string.toUpperCase())){
                         fullNameList.add(fullName);
                         firstNameList.add(firstName);
                         lastNameList.add(lastName);
                         departmentList.add(departmentName);
+                        facultyIdList.add(uid);
                         counter++;
                     }else if(lastName.toLowerCase().contains(string.toLowerCase()) || lastName.toUpperCase().contains(string.toUpperCase())){
                         fullNameList.add(fullName);
                         firstNameList.add(firstName);
                         lastNameList.add(lastName);
                         departmentList.add(departmentName);
+                        facultyIdList.add(uid);
                         counter++;
                     }
 
@@ -160,7 +171,7 @@ public class SearchBarActivity extends AppCompatActivity {
                         break;
                 }
 
-                searchAdapter = new SearchAdapter(SearchBarActivity.this,fullNameList,firstNameList,lastNameList,departmentList);
+                searchAdapter = new SearchAdapter(SearchBarActivity.this,fullNameList,firstNameList,lastNameList,departmentList,facultyIdList);
                 recyclerViewSearchItem.setAdapter(searchAdapter);
             }
 

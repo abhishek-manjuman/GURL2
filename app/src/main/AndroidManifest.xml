@@ -14,7 +14,9 @@
         android:roundIcon="@drawable/galgotias_university_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchBarActivity"></activity>
+        <activity android:name=".ClassSheduleActivity"></activity>
+        <activity android:name=".FacultyProfileActivity" />
+        <activity android:name=".SearchBarActivity" />
         <activity android:name=".UserDetailsActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".ChangePasswordActivity" />
@@ -26,8 +28,9 @@
         <activity android:name=".DepartmentActivity" />
         <activity android:name=".BasicNeedActivity" />
         <activity android:name=".StudentLoginActivity" />
-        <activity android:name=".StudentRegistrationActivity"
-            android:parentActivityName=".StudentLoginActivity"/>
+        <activity
+            android:name=".StudentRegistrationActivity"
+            android:parentActivityName=".StudentLoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

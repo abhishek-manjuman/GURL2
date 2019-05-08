@@ -1,9 +1,12 @@
 package com.example.gu_rl;
 
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+
+//import com.jaredrummler.materialspinner.MaterialSpinner;
 
 public class DepartmentActivity extends AppCompatActivity {
 
@@ -23,6 +26,14 @@ public class DepartmentActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+//         spinner = (MaterialSpinner) findViewById(R.id.materialSpinner);
+//        spinner.setItems("Ice Cream Sandwich", "Jelly Bean", "KitKat", "Lollipop", "Marshmallow");
+//        spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
+//
+//            @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
+//                Snackbar.make(view, "Clicked " + item, Snackbar.LENGTH_LONG).show();
+//            }
+//        });
 
     }
 

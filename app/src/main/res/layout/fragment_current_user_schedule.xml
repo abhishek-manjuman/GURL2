@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".com.classSchedule.CurrentUserScheduleFragment"
+    android:orientation="vertical">
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark1"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Time Schedule"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Subject"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Class Room"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Faculty"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Today Topic"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+
+                </TableRow>
+<TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="09:30 AM - 10:15 AM"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Object Oriented Programming in Python"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="A-306"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Dr. Vijayalakshmi mam"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="CPU Scheduling"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:padding="10dp"/>
+
+                </TableRow>
+<TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark1"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Time Schedule"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Subject"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Class Room"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Faculty"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Today Topic"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+
+                </TableRow>
+<TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark1"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Time Schedule"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Subject"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Class Room"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Faculty"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Today Topic"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:padding="10dp"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </TableLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

@@ -39,7 +39,10 @@
 
     <!-- Seminar halls -->
     <string name="seminar_hall">Auditorium and Seminar Hall The institute encompasses two seminar halls in each blocks, which are designed in a way to accelerate the teaching learning process using modern technological aids. It is normally used to give the presentations, seminars, etc. The halls are fully air conditioned.</string>
-    <string name="a_room_no_222">Room Number : 222</string>
+    <string name="a_room_no_205">Room Number : 205</string>
+    <string name="a_room_no_222">Room Number : 205</string>
+    <string name="a_room_no_206">Room Number : 206</string>
+    <string name="a_room_no_206_205_flore">A-block 2<u>nd</u> flore</string>
     <string name="a_room_no_222_flore">A-block 2<u>nd</u> flore</string>
 
     <!-- Cafeteria -->
@@ -47,6 +50,52 @@
 
     <!-- Stationery -->
     <string name="stationery_detail"> Stationery includes materials to be written on by hand or by equipment such as computer printers. </string>
+
+    <!-- Details Department -->
+
+
+    <!--<select name="movie" class="selectfrm" id="movie" onchange="fDate(this.options[this.selectedIndex].value);">-->
+        <!--<option value="" selected="selected">Select School</option>-->
+
+        <!--<option value="59">School of Agriculture</option>-->
+
+        <!--<option value="5">School of Architecture</option>-->
+
+        <!--<option value="11">School of Basic &amp; Applied Sciences</option>-->
+
+        <!--<option value="7">School of Business</option>-->
+
+        <!--<option value="6">School of Chemical Engineering</option>-->
+
+        <!--<option value="3">School of Civil Engineering</option>-->
+
+        <!--<option value="2">School of Computing Science &amp; Engineering</option>-->
+
+        <!--<option value="60">School of Design</option>-->
+
+        <!--<option value="17">School of Education</option>-->
+
+        <!--<option value="1">School of Electrical, Electronics &amp; Communication Engineering</option>-->
+
+        <!--<option value="8">School of Finance &amp; Commerce</option>-->
+
+        <!--<option value="15">School of Hospitality</option>-->
+
+        <!--<option value="12">School of Law</option>-->
+
+        <!--<option value="9">School of Liberal Arts</option>-->
+
+        <!--<option value="10">School of Library &amp; Information Sciences</option>-->
+
+        <!--<option value="4">School of Mechanical Engineering</option>-->
+
+        <!--<option value="16">School of Media &amp; Communication Studies</option>-->
+
+        <!--<option value="13">School of Medical &amp; Allied Sciences</option>-->
+
+        <!--<option value="14">School of Nursing</option>-->
+
+    <!--</select>-->
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -68,6 +117,10 @@
     <string name="notRegister">If you are not registered yet! Register now if you are a student of galgotias university.</string>
     <string name="profilr_welcome">Welcome</string>
     <string name="updete_profile">Update Profile Details</string>
+
+    <!-- String related to Faculty Profile -->
+    <string name="fac_department"><u>Department</u></string>
+    <string name="fac_cabin_number"><u>Cabin Number</u></string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

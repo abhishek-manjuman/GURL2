@@ -17,70 +17,6 @@
             app:layout_scrollFlags="scroll|enterAlways|snap"
             app:title="Departments"
             app:titleTextColor="@color/colorPrimaryDark1"></android.support.v7.widget.Toolbar>
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorPrimaryDark2"
-            app:tabIndicatorHeight="3dp"
-            app:tabSelectedTextColor="@color/colorPrimaryDark2"
-            app:tabRippleColor="@color/colorPrimaryDark1"
-            app:tabIndicatorGravity="bottom"
-            app:tabMode="scrollable">
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab1"/>
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab2" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab3" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab4" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab5" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab6" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab7" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab8" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab9" />
-
-            <android.support.design.widget.TabItem
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Tab10" />
-        </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
@@ -92,6 +28,47 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:context=".DepartmentActivity">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView22"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+
+                <!--<com.jaredrummler.materialspinner.MaterialSpinner-->
+                    <!--android:id="@+id/materialSpinner"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginStart="8dp"-->
+                    <!--android:layout_marginLeft="0dp"-->
+                    <!--android:layout_marginTop="0dp"-->
+                    <!--android:layout_marginEnd="8dp"-->
+                    <!--android:layout_marginRight="0dp"-->
+                    <!--android:elevation="10dp"-->
+                    <!--app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--app:layout_constraintStart_toStartOf="parent"-->
+                    <!--app:layout_constraintTop_toTopOf="parent"-->
+                    <!--app:ms_arrow_tint="@color/colorPrimary"-->
+                    <!--app:ms_background_color="@color/colorPrimaryDark2"-->
+                    <!--app:ms_hint="Select Program"-->
+                    <!--app:ms_text_color="@color/colorPrimary" />-->
+
+            </android.support.v7.widget.CardView>
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>

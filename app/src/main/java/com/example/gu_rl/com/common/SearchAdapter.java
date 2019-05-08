@@ -1,6 +1,7 @@
 package com.example.gu_rl.com.common;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.gu_rl.FacultyProfileActivity;
 import com.example.gu_rl.R;
-
 import java.util.ArrayList;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> {
@@ -19,6 +20,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     ArrayList<String> firstNameList;
     ArrayList<String> lastNameList;
     ArrayList<String> departmentList;
+    ArrayList<String> facultyIdList;
+    View view;
 
     class SearchViewHolder extends RecyclerView.ViewHolder{
 
@@ -32,12 +35,13 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         }
     }
 
-    public SearchAdapter(Context context, ArrayList<String> fullNameList, ArrayList<String> firstNameList, ArrayList<String> lastNameList, ArrayList<String> departmentList) {
+    public SearchAdapter(Context context, ArrayList<String> fullNameList, ArrayList<String> firstNameList, ArrayList<String> lastNameList, ArrayList<String> departmentList, ArrayList<String> facultyIdList) {
         this.context = context;
         this.fullNameList = fullNameList;
         this.firstNameList = firstNameList;
         this.lastNameList = lastNameList;
         this.departmentList = departmentList;
+        this.facultyIdList = facultyIdList;
     }
 
     @NonNull
@@ -50,10 +54,15 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
     @Override
     public void onBindViewHolder(@NonNull SearchViewHolder searchViewHolder, int i) {
 
-        searchViewHolder.searchItemHeading.setText(fullNameList.get(i));
-        searchViewHolder.searchItemSubHeading.setText(departmentList.get(i));
+            searchViewHolder.searchItemHeading.setText(fullNameList.get(i));
+            searchViewHolder.searchItemSubHeading.setText(departmentList.get(i));
 
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
+                }
+            });
 
     }
 
