@@ -25,6 +25,7 @@ public class DepartmentActivity extends AppCompatActivity {
     private Spinner schoolSpinner;
     private Spinner courseSpinner;
     private TextView departmentDetailsTV;
+    private TextView eligibility;
     ArrayAdapter adapter;
 
     @Override
@@ -37,6 +38,7 @@ public class DepartmentActivity extends AppCompatActivity {
         schoolSpinner = findViewById(R.id.select_schools);
         courseSpinner = findViewById(R.id.select_courses);
         departmentDetailsTV = findViewById(R.id.department_details);
+        eligibility = findViewById(R.id.eligibility);
 
         setSupportActionBar(toolbar);
         //toolbar.setTitle("Basic Need");
@@ -199,8 +201,45 @@ public class DepartmentActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(parent.getItemAtPosition(position).toString().equals("Diploma in Automobile Engineering")) {
-                    departmentDetailsTV.setText("Automobile Engineering is a specialized branch of mechanical engineering, covering the areas of automobile engines, transmission, suspension, braking systems, electrical and electronics, comfort and safety, automotive workshop technology and management.");
+                    departmentDetailsTV.setText("Automobile Engineering is a specialized branch of mechanical engineering, covering the areas of " +
+                            "automobile engines, transmission, suspension, braking systems, electrical and electronics, comfort and safety, " +
+                            "automotive workshop technology and management. This program deals with diploma in automobile engineering to impart " +
+                            "quality education and training on how to handle inside and out of automotives and working of their mechanical parts. " +
+                            "This program aims to produce diploma holders in automobile engineering to provide in Departmenth knowledge of vehicle " +
+                            "engineering, incorporating elements of mechanical, electrical, electronics, software and safety engineering applied to " +
+                            "the design, manufacture and operation of motorcycle, automobile, buses and trunks and their respective engineering " +
+                            "subsystem.");
+                    eligibility.setText("10th with minimum 40% marks. \n" +
+                            "\n" +
+                            "For Lateral Entry:\n" +
+                            "\n" +
+                            "Passed 10+2 examination with Physics and\n" +
+                            "Chemistry as compulsory subjects along with\n" +
+                            "Mathematics/ Biology subject with minimum 40% Marks\n" +
+                            "\n" +
+                            "Or\n" +
+                            "\n" +
+                            "10th + (2 years ITI) with 40% marks in appropriate Trade\n" +
+                            "For Migration from Other Universities/Institutes:\n" +
+                            "\n" +
+                            "Diploma in Engineering 1st year passed with minimum 50% marks or 5.0 CGPA on a 10 point scale\n" +
+                            "40% (minimum) marks at X level.");
                 }
+                else if(parent.getItemAtPosition(position).toString().equals("Diploma in Business Administration")){
+                    departmentDetailsTV.setText("The Diploma in Business Administration (DBA) program is designed for students whose goals " +
+                            "include business management, self-employment, entrepreneurial ventures, or a variety of different careers. " +
+                            "This program helps develop skills as a management generalist, offering maximum flexibility in career choices.\n" +
+                            "\n" +
+                            "Students gain an understanding of the theory and skills needed for the practical applications of modern management " +
+                            "techniques used in a variety of corporate, government and non-profit sectors, as well as in small business ventures.");
+                    eligibility.setText("Higher studies in reputed universities in India and abroad can be pursued.\n\n" +
+                            "Students can attain jobs in office operations, accounting and other front line jobs in business organization.\n\n" +
+                            "Entrepreneurship ventures such as small scale business can be opened.");
+                }
+                else {
+                departmentDetailsTV.setText("");
+                eligibility.setText("");
+            }
             }
 
             @Override
